@@ -1,0 +1,30 @@
+.textField {
+    height: 35px;
+    border: 1px solid red;
+    border-radius: 4px;
+    width: 100%;
+    transition: border-color 0.3s;
+    background-color: antiquewhite;
+}
+.textField:focus {
+    border-color: blue;
+    outline: none;
+}
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fieldContainer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+.submitButton {
+    height: 40px;
+    background-color: aquamarine;
+    border-width: 0px;
+    border-radius: 5px;
+    width: 100px;
+}
