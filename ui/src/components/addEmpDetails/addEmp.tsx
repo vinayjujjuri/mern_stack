@@ -11,7 +11,6 @@ interface IFormInput {
     personalEmail: string;
     mobileNumber: number;
     experience: number;
-    designation: string;
   }
   
   const schema = yup.object({
@@ -28,7 +27,6 @@ interface IFormInput {
       .positive('Experience must be a positive number')
       .integer('Experience must be an integer')
       .required('Experience is required'),
-    designation: yup.string().required('Designation is required'),
   }).required();
 
 export function AddEmpDetailsComponent() {
@@ -39,7 +37,6 @@ export function AddEmpDetailsComponent() {
           personalEmail: "",
           mobileNumber: 0,
           experience: 0,
-          designation: ""
         },
         resolver: yupResolver(schema),
       });
@@ -48,7 +45,7 @@ export function AddEmpDetailsComponent() {
    
 
     const onSubmit: SubmitHandler<IFormInput> = (data) => {
-        console.log(data)
+        console.log(data,"data")
     }
 
 
